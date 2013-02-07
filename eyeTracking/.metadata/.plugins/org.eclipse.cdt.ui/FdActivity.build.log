@@ -1,0 +1,6 @@
+20:42:18 **** Auto Build of configuration Default for project FdActivity ****
+"C:\\AndroidDev\\android-ndk-r8d\\ndk-build.cmd" 
+Install        : libdetection_based_tracker.so => libs/armeabi-v7a/libdetection_based_tracker.so
+
+20:42:19 Build Finished (took 563ms)
+
