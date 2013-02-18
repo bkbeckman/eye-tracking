@@ -1,0 +1,183 @@
+RELEASE HISTORY  
+
+
+Notes for the release 2.6 of the Java Neural Network Framework Neuroph
+
+This release brings many many important new features:
+
+1. Android support for image recognition plugin
+2. Improverd image recognition wizard in Neuroph Studio
+3. Data normlization support (Max, MaxMin, DecimalScale)
+4. Weight randomization techniques (Range, Distort, Gaussian, NguyenWidrow)
+5. Input and output adapters for reading and writing data to files, url, databaes or stream
+6. Simple microbenchmarking framework
+7. Some Unit tests
+8. New learning rules: Resilient Propagation, Anti Hebbian Learning, Generalized Hebbian Learning
+9. New transfer functions: sin, log
+10. JUnit tests for the core package
+
+There are also some changes in framework structure:
+
+1. TrainingSet class now use generics to specify type of training elements (unsupervised or supervised)
+2. Attribute value in Weight class is made public in order to avoid too many getters and setters, make code more readable, and improve performane
+3. To avoid confusion, method learnInSameThread is deprecated, and should not be used. Instead this method, the method learn should be used. 
+
+As of this version easyNeurons GUI is not supported anymore, and Neuroph Studio shoul dbe used instead.
+
+
+--------------------------------------------------------------------------------
+
+
+Notes for the release 2.5 of the Java Neural Network Framework Neuroph
+
+This release brings many performance improvements, algorithm improvemens and bug fixes. Although there are few new features at framework level,
+existing features are significantly improved. Now it also provides integration with Encog engine http://www.heatonresearch.com/encog, which is another great neural network framework.
+Encog provides support for some advanced high performance learning rules, multi core and GPU processing.
+
+Some of the changes include:
+
+1. Using ArrayLists and plain double arrays instead Vectors everywhere (much faster)
+2. LMS 0 fixed the total network error formula - now using real MSE, so the number of iterations is reduced for all LMS based algorithms
+3. Added batch mode support for backpropagation (in fact all LMS based algorithms)
+4. Added training data buffer to weights class
+5. Changed Connection class so now it contans references to 'from' and 'to' neurons. This reduces the number of connection instances to half number 
+needed before.
+6. Fixes for Sigmoid and Tanh transfer functions to avoid NaN values 
+7. Removed learning rule constructors with NN parameter, sice it was making confusion. The way learning rule should be set to neural network is:
+ nnet.setLearningRule(new Backpropagation());
+8. Adalie network modified in order to be the same as original theoretical model: bipolar inputs, bias, ramp transfer function.
+These modifications provides more stable learning more stalbe learning.
+9. Integration with Encog engine and support for flatten networks and Resilient Backpropagation from Encog.
+It is turned off by default but it can be easily turned on with Neuroph.getInstance().flattenNetwork(true);
+10. Other various bugfixes reported at forum and bug trackers
+11. This release breaks compatibility with previous versions of Neuroph, but that was unavoidable for introducing all improvements.
+
+The new GUI for Neuroph is Neuroph Studio which is based on NetBeans Platform http://netbeans.org/features/platform/  and it provides full
+IDE for neural networks and Java. So now it is a single development environment to create neural networks and deploy them to Java applications.
+Neuroph Studio uses Neuroph 2.5b
+Although easyNeurons GUI is now legacy, and the development will stop, we will release one last version of it that supports framework 2.5b.
+ 
+----------------------------------------------------------------------------------------------------------
+
+Notes for the release 2.4 of the Java Neural Network Framework Neuroph
+
+This release brings the following features:
+
+1. Perceptron and MultiLayerPerceptron now have Linear transfer functions in input layer (looks like this improved learning, and thats right to do)
+2. Changed the way ThresholdNeuron calculates output - it used to compare total input with thershold, now it does substraction totalInput-thresh.
+ Since it has Step transfer function on output it makes no difference on final result, but it has better model for visualisation.
+3. Training monitor is now displayed as internal frame so it does not hide behind the main frame.
+4. New icons for toolbar buttons
+5. Created start.bat for easyneurons
+6. Default initial setting of max error 0.01 for all supervised learning rules (many users forget to set this setting when training from code)
+7. Added load(InputStream inputStream)  method to NeuralNetwork class to enable the use of getResourceAsStream to load neural network from jar.
+8. Added BiasNeuron class, which provides bias feature for MLPs and other networks. Bias neuron allways has high output level, and dont has inputs.
+9. Added bias neuron in MultiLayerPerceptrons
+10. Option to create direct conenctions from input to output layer.
+11. User can choose which learning rule want to use for MLP from GUI: Basic backpropagation, Backpropagation with momentum or new Dynamic backpropagation which provides new learning features.
+9. Total network error formula  fixed (again): total_error = (1/2n) sum(e)^2 . Now we multiply with 1/2n, and before it was just 1/n. The original formula use 1/2n
+10. Pause learning feature - user can pause learning threads from gui and code.
+11. Created PerceptronLearning rule which is LMS based learning rule for perceptrons (but its not the same as BinaryDeltaRule)
+12. Added hasReachedStopCondition() to SupervisedLearning class so  we can override and create custom stoping condition in derived classes if needed.
+13. Added new stopping condition 'min error change' to SupervisedLearning so we can specify that we want to stop learning  if error change get to small for some number of iterations (when it gets stuck in local min)
+14. Added doOneLearningIteration method to IterativeLearning which allow to perform step by step learning 
+15. Aded DynamicBackpropagation which can use dynamic learning rate and momentum. Its possible to specify min and max values, and change rate. If the total network error is decreasing both parameters are increased in order to speed up error lowering.
+When the error is increasing both values are decreased to minimize the error growth.
+16. Improved thread sync for error graph, the training is faster and drawing smoother.
+17. Added initializeWeights() methods to NeuralNetwork  class to provide a way to initialise the network with the same weights every time.
+18. Neuron and its components creation using reflection in NeuronFactory: provides powerful mechanism for creating/adding custom neurons and transfer functions.
+19. Added Properties and modified NeuronProperties class (util package), so now it accepts neuron specification in athe form of (key, value) collection
+where values are Class instances.
+20. Perceptron and Backpropagation samples in easyNeurons which provide learning visualization.
+21. Neuron properties are now displayed in Internal farme so it does not hide behind the main frame when use clicks somewhere else. It also shows neurons class.
+22. Added mechanism for defining constraints and validation on size for input and output vectors in training set - Trainingset constructors can accept size for inputand/or output vector,
+and each training element is checked before it is added to training set.
+23. Fixed bug when importing training set if there was and empty line in file (exception was thrown)
+24. Stock Market Prediction samples
+25. OCR tools and API (handwriting and text recognition)
+
+---------------------------------------------------------------------------------------
+
+Notes for the release 2.3.1 of the Java Neural Network Framework Neuroph
+
+This release brings the following features:
+
+1. Several bugfixes for version 2.3 
+  - fixed issue with editing gui in NetBeans (fixed NetBeans project file)
+  - fixed LMS formula
+  - fixed testing in black and white mode for image recognition
+  - fixed gui bug - exceptions when creating large networks
+  
+2. Changed image recognition API, so the color mode is automaticaly detected from settings used for network training - removed unnecessary methods
+
+3. Graph view - migrated graph view to JUNG to 2.0, created specific network layouts and removed unnecessary options  
+
+4. ANT build file is now included in release which can build the jars for library and GUI.
+
+---------------------------------------------------------------------------------------
+
+Notes for the release 2.3 of the Java Neural Network Framework Neuroph
+
+This release brings the following features:
+
+1. Image recognition support (GUI tool and library)  
+  See easyNeurons, Main menu > Tools > Image Recogniton, (a brief HOWTO is available in help)
+  See org.neuroph.contrib.imgrec for classes for image recognition support in your applications (javadoc also available)
+2. API improvments -  See API_CHANGES.txt
+3. Some basic samples in org.neuroph.samples
+4. Improved javadoc documentation
+5. Some UML diagrams - see doc/uml
+
+---------------------------------------------------------------------------------------
+
+Notes for the release 2.2 of the Neuroph framework
+
+This release brings the following features:
+
+- momentum for backpropagation (makes the learning more than two times faster!) - see org.neuroph.nnet.learning.MomentumBackpropagation
+- xml support for neural networks and training sets
+- import training set from files (txt, csv...) 
+- network error graph for LMS based learning rules
+- Instar, Outstar, BAM neural networks and learning rules
+- basic help system
+- sample image recognition application at org.neuroph.contrib.tileclassification
+
+---------------------------------------------------------------------------------------
+
+Notes for the release 2.1.1 beta of the Neuroph framework
+
+This release bring few bug fixes:
+- kohonen network sample had bug with drawing - fixed
+- backpropagation with tanh was throwing exception - fixed
+
+And some new features:
+
+- basic neuron sample
+- unsupervised hebbian learning 
+- oja learning rule
+- new GUI components JNeuron, JLayer and JNeuralNetwork which provide cleaner API and new features
+  like neuron color depending of activation level
+
+---------------------------------------------------------------------------------------
+
+Notes for the release 2.1.0 beta of the Neuroph framework
+
+Some of the important things this release brings to you are:
+
+* completly separated core framework library neuroph.jar and gui application easyNeurons.jar
+* cleaned up most of the compilation warnings
+* removed deprecated stop() methods for stopping learning thread, and restructered learning classes for IterativeLearning
+* added foreach loops wherever applicable, which significantly improved code readability
+* improved serialization support
+* several bug fixes in core and GUI
+* neural network plugins support (see plugins package)
+* labels plugin which enables labeling for all neural network componets
+* removed borland layout managers in GUI
+* documentation for all classes and methods from library
+
+Unfortunately due to many changes in core classes, serialized networks created with previous versions of this framework
+are not compatible with this release, but that could not be avoided. We hope that this will be the stable release.
+
+More info about this project is available at http://neuroph.sourceforge.net
+If you develop something using this framework you are welcome to contribute.
+Many thanks to Jon Tait, who joined the team and helped a lot to improve the overall quality of this framework.
