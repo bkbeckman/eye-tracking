@@ -9,7 +9,7 @@
         android:icon="@drawable/icon"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
 
-        <activity android:name="ceg4120.eyeTracking.FdActivity"
+        <activity android:name="ceg4120.eyeTracking.EdActivity"
                   android:label="@string/app_name"
                   android:screenOrientation="landscape"
                   android:configChanges="keyboardHidden|orientation">

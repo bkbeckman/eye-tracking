@@ -1,8 +1,8 @@
 obj/local/armeabi-v7a/objs/detection_based_tracker/DetectionBasedTracker_jni.o: \
  jni/DetectionBasedTracker_jni.cpp jni/DetectionBasedTracker_jni.h \
  C:/AndroidDev/android-ndk-r8d/platforms/android-8/arch-arm/usr/include/jni.h \
- ../native/jni/include/opencv2/core/core.hpp \
- ../native/jni/include/opencv2/core/types_c.h \
+ C:/Users\jtben_000\Documents\GitHub\eye-tracking\OpenCV_Library_Files\native\jni\/include/opencv2/core/core.hpp \
+ C:/Users\jtben_000\Documents\GitHub\eye-tracking\OpenCV_Library_Files\native\jni\/include/opencv2/core/types_c.h \
  C:/AndroidDev/android-ndk-r8d/platforms/android-8/arch-arm/usr/include/assert.h \
  C:/AndroidDev/android-ndk-r8d/platforms/android-8/arch-arm/usr/include/sys/cdefs.h \
  C:/AndroidDev/android-ndk-r8d/platforms/android-8/arch-arm/usr/include/sys/cdefs_elf.h \
@@ -33,18 +33,18 @@ obj/local/armeabi-v7a/objs/detection_based_tracker/DetectionBasedTracker_jni.o: 
  C:/AndroidDev/android-ndk-r8d/platforms/android-8/arch-arm/usr/include/machine/limits.h \
  C:/AndroidDev/android-ndk-r8d/platforms/android-8/arch-arm/usr/include/sys/syslimits.h \
  C:/AndroidDev/android-ndk-r8d/platforms/android-8/arch-arm/usr/include/asm/page.h \
- ../native/jni/include/opencv2/core/version.hpp \
+ C:/Users\jtben_000\Documents\GitHub\eye-tracking\OpenCV_Library_Files\native\jni\/include/opencv2/core/version.hpp \
  C:/AndroidDev/android-ndk-r8d/sources/cxx-stl/gnu-libstdc++/4.6/include/algorithm \
  C:/AndroidDev/android-ndk-r8d/sources/cxx-stl/gnu-libstdc++/4.6/include/cmath \
  C:/AndroidDev/android-ndk-r8d/sources/cxx-stl/gnu-libstdc++/4.6/include/cstddef \
  C:/AndroidDev/android-ndk-r8d/sources/cxx-stl/gnu-libstdc++/4.6/include/complex \
  C:/AndroidDev/android-ndk-r8d/sources/cxx-stl/gnu-libstdc++/4.6/include/map \
  C:/AndroidDev/android-ndk-r8d/sources/cxx-stl/gnu-libstdc++/4.6/include/vector \
- ../native/jni/include/opencv2/core/operations.hpp \
+ C:/Users\jtben_000\Documents\GitHub\eye-tracking\OpenCV_Library_Files\native\jni\/include/opencv2/core/operations.hpp \
  C:/AndroidDev/android-ndk-r8d/sources/cxx-stl/gnu-libstdc++/4.6/include/limits \
- ../native/jni/include/opencv2/core/mat.hpp \
- ../native/jni/include/opencv2/contrib/detection_based_tracker.hpp \
- ../native/jni/include/opencv2/objdetect/objdetect.hpp \
+ C:/Users\jtben_000\Documents\GitHub\eye-tracking\OpenCV_Library_Files\native\jni\/include/opencv2/core/mat.hpp \
+ C:/Users\jtben_000\Documents\GitHub\eye-tracking\OpenCV_Library_Files\native\jni\/include/opencv2/contrib/detection_based_tracker.hpp \
+ C:/Users\jtben_000\Documents\GitHub\eye-tracking\OpenCV_Library_Files\native\jni\/include/opencv2/objdetect/objdetect.hpp \
  C:/AndroidDev/android-ndk-r8d/sources/cxx-stl/gnu-libstdc++/4.6/include/deque \
  C:/AndroidDev/android-ndk-r8d/platforms/android-8/arch-arm/usr/include/android/log.h
 
@@ -52,9 +52,9 @@ jni/DetectionBasedTracker_jni.h:
 
 C:/AndroidDev/android-ndk-r8d/platforms/android-8/arch-arm/usr/include/jni.h:
 
-../native/jni/include/opencv2/core/core.hpp:
+C:/Users\jtben_000\Documents\GitHub\eye-tracking\OpenCV_Library_Files\native\jni\/include/opencv2/core/core.hpp:
 
-../native/jni/include/opencv2/core/types_c.h:
+C:/Users\jtben_000\Documents\GitHub\eye-tracking\OpenCV_Library_Files\native\jni\/include/opencv2/core/types_c.h:
 
 C:/AndroidDev/android-ndk-r8d/platforms/android-8/arch-arm/usr/include/assert.h:
 
@@ -116,7 +116,7 @@ C:/AndroidDev/android-ndk-r8d/platforms/android-8/arch-arm/usr/include/sys/sysli
 
 C:/AndroidDev/android-ndk-r8d/platforms/android-8/arch-arm/usr/include/asm/page.h:
 
-../native/jni/include/opencv2/core/version.hpp:
+C:/Users\jtben_000\Documents\GitHub\eye-tracking\OpenCV_Library_Files\native\jni\/include/opencv2/core/version.hpp:
 
 C:/AndroidDev/android-ndk-r8d/sources/cxx-stl/gnu-libstdc++/4.6/include/algorithm:
 
@@ -130,15 +130,15 @@ C:/AndroidDev/android-ndk-r8d/sources/cxx-stl/gnu-libstdc++/4.6/include/map:
 
 C:/AndroidDev/android-ndk-r8d/sources/cxx-stl/gnu-libstdc++/4.6/include/vector:
 
-../native/jni/include/opencv2/core/operations.hpp:
+C:/Users\jtben_000\Documents\GitHub\eye-tracking\OpenCV_Library_Files\native\jni\/include/opencv2/core/operations.hpp:
 
 C:/AndroidDev/android-ndk-r8d/sources/cxx-stl/gnu-libstdc++/4.6/include/limits:
 
-../native/jni/include/opencv2/core/mat.hpp:
+C:/Users\jtben_000\Documents\GitHub\eye-tracking\OpenCV_Library_Files\native\jni\/include/opencv2/core/mat.hpp:
 
-../native/jni/include/opencv2/contrib/detection_based_tracker.hpp:
+C:/Users\jtben_000\Documents\GitHub\eye-tracking\OpenCV_Library_Files\native\jni\/include/opencv2/contrib/detection_based_tracker.hpp:
 
-../native/jni/include/opencv2/objdetect/objdetect.hpp:
+C:/Users\jtben_000\Documents\GitHub\eye-tracking\OpenCV_Library_Files\native\jni\/include/opencv2/objdetect/objdetect.hpp:
 
 C:/AndroidDev/android-ndk-r8d/sources/cxx-stl/gnu-libstdc++/4.6/include/deque:
 

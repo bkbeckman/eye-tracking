@@ -1,0 +1,6 @@
+20:59:13 **** Auto Build of configuration Default for project face-detection ****
+"C:\\AndroidDev\\android-ndk-r8d\\ndk-build.cmd" 
+Install        : libdetection_based_tracker.so => libs/armeabi-v7a/libdetection_based_tracker.so
+
+20:59:13 Build Finished (took 518ms)
+
