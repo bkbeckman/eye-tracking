@@ -1,0 +1,22 @@
+This release package of Neuroph contains the following:
+
+/doc					Documentation
+/doc/apidocs		    		Javadoc API documentation
+/doc/NeurophFrameworkDiagram.jpg	Overview diagram of the framework components/packages
+/doc/BasicConcepts.jpg  		Basic concepts/core components of the framework
+/doc/BasicClassDiagram.jpg  		Basic class diagram
+
+/sources        			Java sources as Maven project (easily opened with NetBeans)
+
+neuroph-core-2.7.jar	Neuroph Framework library
+neuroph-imgrec-2.7.jar	Image recognition support
+neuroph-ocr-2.7.jar	OCR support
+neuroph-samples-2.7.jar	Various samples
+
+
+CHANGELOG-2.7.txt   List of changes in this release.
+FILELIST.txt	List of files in this release
+HISTORY.txt     Release history
+LICENSE.txt	Apache 2 licence file
+README.txt	Some notes about this release and the Neuroph project
+VERSION.txt     Version of this release

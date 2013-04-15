@@ -1,0 +1,40 @@
+/////////////////////////////////////////////////
+
+  NEUROPH - JAVA NEURAL NETWORK FRAMEWORK
+  http://neuroph.sourceforge.net
+
+/////////////////////////////////////////////////
+
+
+This is the 2.7 release of the Neuroph framework
+
+This release brings some important changes which stabilize framework, improve preformance, provide better user experience
+and make solid base for future growth. Main changes include:
+
+1. Performance improvements about 30% thanks to use of plain arrays instead of ArrayList collection for storing layers, neurons and connections (thanks to Borislav Markov on idea and help with this)
+2. Listing of supported input functions, transfer functions, learning rues, neuron and layer classes using API - through Neuroph class
+3. New class DataSet which replace old TrainingSet class (beside nameing change which now prevents confusion with Test and Validation sets, 
+there are some implementation changes and same class is used for storing supervised and unsupervised data sets)
+4. Greatly improved visual editor in Neuroph Studio with full component pallete - everything you have on framework level now you can simpy drag n' drop (thanks to Marjan Hrzic and Uros Stojkic from University of Belgrade for help with this)
+5. Weights histogram in Neuroph Studio (thanks to prof Maureen Doyle, Jim Neilan and Raj Akula from Northern Kentucky University for this contribution)
+6. New real time error graph based on real time graph drawing from Visual VM
+7. Imporved Stock Market Prediction Wizard based on Time Series prediction (thanks to Nenad Maljukan from University of Novi Sad for helpa)
+8. Normalize and shuffle data sets using right click options (thanks to Stevica Arsic form University of Belgrade for this contribution)
+9. Bug fix for black n' white image recognition
+10. Fixed OCR wizards for text and handwritten char recognition
+11. Project source tree is now splited into several subprojects
+We did this because project source tree started to grow, and it also included various unrelated application specific packages 
+(for example someone who needs image recognition is probably not interested in stock rediction etc.)		
+
+Neuroph project now consists of the following subprojects:
+Core	-	neuroph framework core/essential basic classes
+ImageRec	image recognition support
+OCR		OCR suport
+Samples		Various examples
+Contrib		Misc contributions and stuff under development
+
+We're also using Maven build in order to manage dependencies 
+
+Note that this relase does not have support for Encog but it will be added soon. Encog support was removed due to various internal changes, and also we would like to support the latest version of Encog.
+Also we would like make Encog dependency optional (along with other stuff Encog depends on), since this made a confusion for some users. We'll work with Encog team in order to find best solution for this.
+
