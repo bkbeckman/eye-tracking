@@ -1,3 +1,0 @@
-INDEX VERSION 1.126+C:\Work\eyeTracking\.metadata\.plugins\org.eclipse.jdt.core
-2424974901.index
-1269259778.index

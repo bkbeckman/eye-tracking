@@ -1,6 +1,0 @@
-14:05:38 **** Auto Build of configuration Default for project eyeTracking ****
-"C:\\AndroidDev\\android-ndk-r8d\\ndk-build.cmd" 
-Install        : libdetection_based_tracker.so => libs/armeabi-v7a/libdetection_based_tracker.so
-
-14:05:38 Build Finished (took 673ms)
-

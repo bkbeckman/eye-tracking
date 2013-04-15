@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <ToggleButton
+        android:id="@+id/toggleForegroundProcessReporter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="17dp"
+        android:text="On" />
+
+    <TextView
+        android:id="@+id/textview_foreground_process_reporting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/toggleForegroundProcessReporter"
+        android:layout_alignBottom="@+id/toggleForegroundProcessReporter"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="16dp"
+        android:text="Foreground Process Reporting" />
+
+    <Button
+        android:id="@+id/buttonCalibrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textview_foreground_process_reporting"
+        android:layout_alignRight="@+id/toggleForegroundProcessReporter"
+        android:layout_below="@+id/toggleForegroundProcessReporter"
+        android:layout_marginTop="14dp"
+        android:text="@string/calibrate" />
+
+    <Button
+        android:id="@+id/buttonSetService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonCalibrate"
+        android:layout_alignRight="@+id/buttonCalibrate"
+        android:layout_below="@+id/buttonCalibrate"
+        android:layout_marginTop="14dp"
+        android:text="@string/assign_process" />
+
+    <Button
+        android:id="@+id/buttonDemoMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonSetService"
+        android:layout_alignRight="@+id/buttonSetService"
+        android:layout_below="@+id/buttonSetService"
+        android:layout_marginTop="14dp"
+        android:text="@string/demo_mode" />
+
+</RelativeLayout>
